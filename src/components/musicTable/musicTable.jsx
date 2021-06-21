@@ -16,7 +16,7 @@ export default function MusicTable(props) {
                 </thead>
                 <tbody>
                 {props.songs.map((song, index) => (
-                    <tr data-index={index}>
+                    <tr data-index={index} key={song.id}>
                         <th scope="row">{song.id}</th>
                         <td>{song.title}</td>
                         <td>{song.artist}</td>
