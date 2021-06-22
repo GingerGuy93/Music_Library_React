@@ -1,10 +1,13 @@
 import React from 'react';
 
+
 export default function MusicTable(props) {
+
     return (
-        <div class="container">
+        <div className="container">
             <h2>My Collection</h2>
-            <table class="table table-dark table-striped">
+
+            <table className="table table-dark table-striped">
                 <thead>
                 <tr>
                     <th>ID</th>

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
 class NewSong extends Component {
-    state = {
-        song: '',
-        artist: '',
-        album: '',
-        releaseDate: '',
+    constructor(props) {
+        super(props)
+        this.state = {
+            song: '',
+            artist: '',
+            album: '',
+            release_date: '',
+        };
     }
 
     handleChange = (event) => {
@@ -20,7 +23,7 @@ class NewSong extends Component {
     };
     render(){
         return(
-            <form onSubmit={(event) => this.handleSubmit(event)}>
+            <form onSubmit={this.handleSubmit}>
                 <label>Song: </label>
                 <input type='text' name='song' onChange={this.handleChange} value={this.state.song}/>
                 <label>Artist: </label>
@@ -28,10 +31,11 @@ class NewSong extends Component {
                 <label>Album: </label>
                 <input type='text' name='album' onChange={this.handleChange} value={this.state.album}/>
                 <label>Release Date: </label>
-                <input type='text' name='releaseDate' onChange={this.handleChange} value={this.state.releaseDate}/>
+                <input type='text' name='release_date' onChange={this.handleChange} value={this.state.release_date}/>
                 <button type='submit'>Add Song</button>
             </form>
         );
     }
 }
-export default NewSong;
+
+export default NewSong
